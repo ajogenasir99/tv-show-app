@@ -1,0 +1,30 @@
+.movie-container {
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+
+body {
+    background-color: #222;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    color: black;
+}
+
+form {
+    text-align: center;
+}
+
+.movie-container .card {
+    width: 33%;
+    margin-bottom: .5rem;
+}
+
+.movie-container .card:not(:last-child) {
+    margin-bottom: .5rem;
+}
