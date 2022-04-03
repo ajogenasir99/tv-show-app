@@ -36,12 +36,17 @@ const makeImgs = (shows) => {
             img.alt = `${result.show.name} tv show picture`;
             cardTitle.textContent = result.show.name;
             let text = result.show.summary;
+            if (text.length > 330) {
+                text = text.slice(0, 330);
+                text += "...</p>"
+            }
             cardText.innerHTML = text;
             cardLink.setAttribute('href', result.show.url);
             cardLink.textContent = 'Read More';
             cardBody.append(cardTitle, cardText, cardLink);
             card.append(img, cardBody);
             container.append(card);
+            console.log(text.length)
         }
     }
 }

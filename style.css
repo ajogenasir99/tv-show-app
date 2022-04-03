@@ -23,6 +23,11 @@ form {
 .movie-container .card {
     width: 33%;
     margin-bottom: .5rem;
+
+}
+
+.movie-container .card .card-img-top {
+    max-height: 425px;
 }
 
 .movie-container .card:not(:last-child) {
