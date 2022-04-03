@@ -2,9 +2,19 @@ const form = document.querySelector('#searchForm');
 let container = document.querySelector('.movie-container');
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    deleteImgs()
     getTvShow();
     e.target.elements.query.value = '';
 })
+
+
+const deleteImgs = function () {
+    const cards = document.querySelectorAll('.card');
+    for (let card of cards) {
+        card.remove();
+    }
+}
+
 
 const makeImgs = (shows) => {
 
